@@ -72,7 +72,7 @@ export const getPdf = async () => {
 
 	const pdf = await page.pdf({ format: 'A4', path: 'main.pdf', printBackground: true });
 
-	// addToS3(pdf)
+	addToS3(pdf)
 	console.log('53');
 
 
