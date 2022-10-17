@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Order Report PDF</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        height: 100%;
+      }
+      .container {
+        font-family: 'Open Sans', sans-serif;
+      }
+      .grey {
+        color: #9c9c9c;
+        background-color: #fff !important;
+      }
+      .blue {
+        color: #2997ff;
+        background-color: #fff !important;
+      }
+      .green {
+        color: #90ee90;
+        background-color: #fff !important;
+      }
+      .red {
+        color: #ff0000;
+        background-color: #fff !important;
+      }
+      .blue-bg {
+        background: #f6f9fa;
+      }
+      .orderTitle {
+        background: #f6f9fa;
+        line-height: 27px;
+        padding: 15px;
+        margin-bottom: 0px;
+      }
+      .subTitleText {
+        line-height: 24px;
+        margin-left: 12px;
+        margin-top: 5px;
+        margin-bottom: 0px;
+      }
+      .subTitleDetails {
+        line-height: 22px;
+        margin-left: 12px;
+        margin-top: 5px;
+        margin-bottom: 0px;
+      }
+      .pp {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div style="margin: 0px; padding: 0px; text-align: center">
+        <img src="{{provider.letterhead}}" width="90%" height="90%" />
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- Demographic Data Section -->
+      <!-- ============================================================== -->
+      <hr style="margin-top: 0px; padding-top: 0px" />
+      <p style="padding-left: 12px; margin: 0px">
+        <b class="pp">Patient Name: </b>{{patientName patientFullName age gender}}
+      </p>
+      <p style="padding-left: 12px; margin: 0px"><b>Provider: </b>{{provider.fullName}}</p>
+      <p style="padding-left: 12px; margin: 0px"><b>Appointment Date: </b>{{appointmentDate}}</p>
+      <p style="font-size: 22px; padding-left: 8px; margin-top: 10px; margin-bottom: 0px">
+        <b>Orders</b>
+      </p>
+
+      {{#if orders}} {{#each orders}}
+      <div style="page-break-inside: avoid">
+        <p class="orderTitle"><b>{{orderIndex @index}}. {{orderItem}}</b></p>
+        <p class="subTitleText grey"><b>Instructions</b></p>
+        <p class="subTitleDetails">{{instructions}}</p>
+        {{#if diagnoses}}
+        <p class="subTitleText grey"><b>Diagnoses</b></p>
+        {{#each diagnoses}}
+        <p class="subTitleDetails">{{icdCode}}</p>
+        {{/each}} {{/if}} {{#isAdditionalDetails outsideReferral authorizationRequired}}
+        <p class="subTitleText grey"><b>Additional Details</b></p>
+        {{#if outsideReferral}}
+        <p class="subTitleDetails">- Outside Referral</p>
+        {{/if}} {{#if authorizationRequired}}
+        <p class="subTitleDetails">- Authorization Required</p>
+        {{/if}} {{/isAdditionalDetails}}
+      </div>
+      {{/each}} {{/if}}
+
+      <div style="page-break-inside: avoid">
+        <p style="margin-left: 12px; margin-top: 50px">
+          <b>Orders entered and authorized by {{provider.fullName}} on {{appointmentDate}}.</b>
+        </p>
+        <img src="{{provider.signatureUrl}}" />
+      </div>
+    </div>
+  </body>
+</html>

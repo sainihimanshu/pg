@@ -1,0 +1,122 @@
+{
+  "templateData": "orderReport",
+  "format": "pdf",
+  "fileName": "wg, Test 12-29-2019 RAPID 3_V2",
+  "patientFullName": "Test wg",
+  "age": 27,
+  "gender": "Male",
+  "phone": "123456789",
+  "email": "rh@rh.rh",
+  "provider": {
+    "practiceId": "dd",
+    "practiceName": "wg - Woodlands ",
+    "fullName": "Dr. RJ",
+    "letterhead": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/A_Bukharan_dance_performed_by_members_of_the_Rina_Nikova_ballet_in_the_citadel_of_Jerusalem_-_Restoration.jpg/750px-A_Bukharan_dance_performed_by_members_of_the_Rina_Nikova_ballet_in_the_citadel_of_Jerusalem_-_Restoration.jpg",
+    "signatureUrl": ""
+  },
+  "appointmentDate": "06/20/2020",
+  "orders": [
+    {
+      "orderItem": "C-Reactive Protein (CRP) Quant",
+      "instructions": "We agreed that instructions regarding doing a skin test for pathergy would be sent to her so that she could arrange to get this done where she is living. She will also be sent a list of laboratory tests to obtain from her local lab. Based upon the results of this tesing further recommendaions will be made.",
+      "outsideReferral": true,
+      "authorizationRequired": true,
+      "diagnoses": [
+        {
+          "icdCode": "L40.0 Psoriasis vulgaris"
+        },
+        {
+          "icdCode": "L40.2 Acrodermatitis continua"
+        },
+        {
+          "icdCode": "M13.80 Other specified arthritis, unspecified site"
+        }
+      ]
+    },
+    {
+      "orderItem": "Complete Blood Count (CBC)",
+      "instructions": "We agreed that instructions regarding doing a skin test for pathergy would be sent to her so that she could arrange to get this done where she is living. She will also be sent a list of laboratory tests to obtain from her local lab. Based upon the results of this tesing further recommendaions will be made.",
+      "outsideReferral": false,
+      "authorizationRequired": true,
+      "diagnoses": [
+        {
+          "icdCode": "L40.0 Psoriasis vulgaris"
+        },
+        {
+          "icdCode": "L40.2 Acrodermatitis continua"
+        },
+        {
+          "icdCode": "M13.80 Other specified arthritis, unspecified site"
+        }
+      ]
+    },
+    {
+      "orderItem": "Sedimenta6on Rate (ESR) Westergren",
+      "instructions": "We agreed that instructions regarding doing a skin test for pathergy would be sent to her so that she could arrange to get this done where she is living. She will also be sent a list of laboratory tests to obtain from her local lab. Based upon the results of this tesing further recommendaions will be made.",
+      "outsideReferral": true,
+      "authorizationRequired": false,
+      "diagnoses": [
+        {
+          "icdCode": "L40.0 Psoriasis vulgaris"
+        },
+        {
+          "icdCode": "L40.2 Acrodermatitis continua"
+        },
+        {
+          "icdCode": "M13.80 Other specified arthritis, unspecified site"
+        }
+      ]
+    },
+    {
+      "orderItem": "C-Reactive Protein (CRP) Quant",
+      "instructions": "We agreed that instructions regarding doing a skin test for pathergy would be sent to her so that she could arrange to get this done where she is living. She will also be sent a list of laboratory tests to obtain from her local lab. Based upon the results of this tesing further recommendaions will be made.",
+      "outsideReferral": false,
+      "authorizationRequired": false,
+      "diagnoses": [
+        {
+          "icdCode": "L40.0 Psoriasis vulgaris"
+        },
+        {
+          "icdCode": "L40.2 Acrodermatitis continua"
+        },
+        {
+          "icdCode": "M13.80 Other specified arthritis, unspecified site"
+        }
+      ]
+    },
+    {
+      "orderItem": "Complete Blood Count (CBC)",
+      "instructions": "We agreed that instructions regarding doing a skin test for pathergy would be sent to her so that she could arrange to get this done where she is living. She will also be sent a list of laboratory tests to obtain from her local lab. Based upon the results of this tesing further recommendaions will be made.",
+      "outsideReferral": true,
+      "authorizationRequired": true,
+      "diagnoses": [
+        {
+          "icdCode": "L40.0 Psoriasis vulgaris"
+        },
+        {
+          "icdCode": "L40.2 Acrodermatitis continua"
+        },
+        {
+          "icdCode": "M13.80 Other specified arthritis, unspecified site"
+        }
+      ]
+    },
+    {
+      "orderItem": "Sedimentation Rate (ESR) Westergren",
+      "instructions": "We agreed that instructions regarding doing a skin test for pathergy would be sent to her so that she could arrange to get this done where she is living. She will also be sent a list of laboratory tests to obtain from her local lab. Based upon the results of this tesing further recommendaions will be made.",
+      "outsideReferral": true,
+      "authorizationRequired": true,
+      "diagnoses": [
+        {
+          "icdCode": "L40.0 Psoriasis vulgaris"
+        },
+        {
+          "icdCode": "L40.2 Acrodermatitis continua"
+        },
+        {
+          "icdCode": "M13.80 Other specified arthritis, unspecified site"
+        }
+      ]
+    }
+  ]
+}
